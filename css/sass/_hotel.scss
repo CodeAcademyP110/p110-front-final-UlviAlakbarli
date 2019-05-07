@@ -1,0 +1,528 @@
+.index-hotel{
+    background-color: $lightgray;
+    footer{
+        background-color: white;
+    }
+}
+#recommended-hotels{
+    background-color: $lightgray;
+    .select-green{
+        
+            display: inline-block;
+            padding: 3px 5px;
+            margin-top: 10px;
+            color:white;
+            background-color: lightgrey;
+            font-size: 10px;
+            transition:all 0.3s ease;
+            &:hover{
+                background-color: $lightgreen;
+            }
+        
+    }
+    .recommended-arrow{
+        i{
+            display: inline-block;
+            padding: 4px 10px;
+            margin-left:15px;
+            background-color: $blue;
+            color: white;
+            cursor: pointer;
+            
+        }
+        
+    }
+    h5{
+         font-size: 20px;
+         font-weight: 400;
+         color:$darkblue;
+     }
+     .destination-items{
+         width: 100%;
+         height: 150px;
+         
+         
+        .destination-image{
+         position: relative;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         img{
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             transform: scale(1);
+             transition: 0.6s all ease;
+             
+         }
+         .overlay{
+             background-color: $bluergba;
+             cursor: pointer;
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             transform: scale(0.5) rotateY(180deg);
+             color:white;
+             font-size: 40px;
+             opacity: 0;
+             transition: 0.6s all ease;
+         }
+         &:hover{
+             img{
+                 transform: scale(1.2);
+             }
+             .overlay{
+                 opacity: 1;
+                 transform: scale(1) rotateY(0deg);
+             }
+ 
+         }
+        }
+        .destination-text{
+            background-color: white;
+            .destination-content{
+                h4{
+                      font-size: 16px;
+                      color:$darkblue;
+                      margin-bottom: 0px;
+                      margin-top: 8px;
+                      line-height:10px 
+
+                }
+                p{  
+                    line-height: 10px;
+                    font-size: 14px;
+                    color:$lightgreen;
+                    display: inline-block;
+                }
+                span{
+                    font-size: 10px;
+                    color:$gray;
+                }
+                   
+              }
+              
+             
+ 
+        }
+     }
+     .window{
+         height: 250px;
+         position: relative;
+         overflow: hidden;
+        .hotel-slider{
+            position: absolute;
+            top:0px;
+            left:0px;
+            transition: $tr03;
+        }
+     }
+     
+ 
+ }
+ //Hotel Detal
+ #hotel-detail{
+    background-color: $lightgray;
+    h3{
+        font-size: 20px;
+        color:$darkblue;
+    }
+     .hot-hotel-detal{
+         background-color: white;
+         padding: 15px;
+         width: 100%;
+         height: 100%;
+         .details-heading{
+             display: flex;
+             align-content: center;
+             justify-content: space-around;
+             border-bottom: 1px solid $lightgray;
+             .active{
+                color:white;
+                background-color: $blue;
+                i{
+                    display: block;
+                }
+                   
+             }
+             @media (min-width:0px)and(max-width:992px){
+
+                li{
+                        margin: 0px;
+                        width: 100%;
+                }
+            }
+            @media (min-width:991px){
+
+                li{
+                    margin: 0px 10px 10px 10px;
+                    
+                      &:hover{
+                        color:white;
+                        background-color: $blue;
+                        i{
+                            display: block;
+                        }
+                    }
+                }
+            }
+             li{
+                 
+                 position: relative;
+                 
+                 font-size: 11px;
+                 font-weight: 600;
+                 color:$gray;
+                 background-color: $lightgray;
+                 padding: 10px 15px;
+                 cursor: pointer;
+                 i{
+                     position: absolute;
+                     top:100%;
+                     left: 50%;
+                     transform: translate(-50%,-43%);
+                     color: $blue;
+                     font-size: 30px;
+                     display: none;
+                     
+                     
+                 }
+                 
+             }
+         }
+         .hotel-content{
+              display: flex;
+              padding: 20px;
+              flex-wrap: nowrap;
+              .content-img{
+                  position: relative;
+                  width: 100%;
+
+                  img{
+                      width: 100%;
+                      object-fit: cover;
+                      
+
+                  }
+                  .price-save{
+                      position: absolute;top: 0px;left: 0px;
+                      color: white;
+                      background-color: $red;
+                      border-radius: 100%;
+                      padding: 7px;
+                      transform: translate(-30%,-30%);
+                      span{
+                          display: block;
+                          line-height:10px;
+                          font-size: 10px;
+                          line-height: 11px;
+                      }
+
+                  }
+              }
+              .content-text{
+                  h5{
+                      font-weight: 400;
+                      font-size: 14px;
+                      color: $darkblue;
+                      margin: 0px;
+                      line-height: 6px;
+
+                  }
+                  span{
+                      font-size: 10px;
+                      color: $gray;
+                      line-height: 3px;
+                  }
+                  p{
+                      font-size: 13px;
+                      color: $gray;
+                  }
+
+              }
+              .content-price{
+                  text-align: right;
+                  display: flex;
+                  flex-direction: column;
+                  span{
+                    font-size: 10px;
+                    color: #838383;
+                    
+                  }
+                  h4{
+                      font-size: 20px;
+                      color: $lightgreen;
+                      margin: 0;
+
+                  }
+                  a{
+                    display: inline-block;
+                    padding: 3px 4px;
+                    margin-top: 10px;
+                    color:white;
+                    background-color: $lightgreen;
+                    font-size: 10px;
+                    text-align: center;
+                  }
+
+              }
+
+
+         }
+     }
+     .travelers-say{
+         width: 100%;
+         background-color: white;
+         padding: 20px;
+         .say-window{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            .carus{
+                width: 300%;
+               display: flex;
+               flex-direction: row;
+               flex-wrap: nowrap;
+               position: absolute;
+               left: 0%;
+               top: 0%;
+               transition: all 0.6s ease;
+               .say-content{
+                   width: 100%;
+                   p{
+                       color:$blue;
+                       font-style: italic;
+                       font-size: 16px;
+                   }
+                   .travelers{
+                       img{
+                           width: 80px;
+                           height: 80px;
+                           border-radius: 100%;
+                       }
+                       h5{ 
+                           margin-left:15px;
+                           font-size: 14px;
+                           color: $darkblue;
+                           small{
+                               font-size: 10px;
+                               color:#777777;
+                           }
+                       }
+                   }
+                  
+               }
+            }
+            
+   
+   
+        }
+        .left-circle{
+            span{
+                cursor: pointer;
+                padding: 6px;
+                border-radius: 100%;
+                background-color: white;
+                border:1px solid lightgray;
+                display: inline-block;
+                
+            }
+            .active{
+                background-color: $orange;
+                border: 1px solid $orange;
+            }
+        }
+
+     }
+     
+ }
+ //Choise of Hotels
+ .choiseOfHotels{
+     .hotel-slider{
+         position: absolute;
+         left:0px;
+         
+             transition: 0.9s all ease;
+         
+     }
+     .window-hotel{
+         min-height: 373px;
+         position: relative;
+         overflow: hidden;
+         .hotel-rate{
+            background-color: white;
+            p{
+                font-size: 10px;
+                color: $lightergray;
+            }
+         }
+         .hotel-rate>div>ul>li{
+             
+            i{
+                font-size: 12px;
+                color:$orange;
+                
+              }
+              &:last-child{
+                  i{
+                    
+                        color: $lightgray;
+                   
+                  }
+
+              }
+            
+         }
+         .hotel-about{
+             background-color: white;
+             p{
+                 font-size: 13px;
+                 color:$gray;
+             }
+
+         }
+         .hotel-select{
+             background-color: white;
+             padding-bottom: 20px;
+                 a{ 
+                     margin-top: 20px;
+                    padding: 5px 0px;
+                     color: white;
+                     width: 47%;
+                     font-weight: 700;
+                     font-size: 11px;
+                     display: inline-block;
+                     text-align: center;
+                     transition: $tr03;
+                     &:first-child{
+                         background-color: $lightergray;
+                         &:hover{
+                             background-color: $lightgreen;
+                         }
+                     }
+                     &:last-child{
+                          background-color: $orange;
+                          
+                          &:hover{
+                              background-color: rgb(201, 146, 19);
+                          }
+                     }
+                 }
+                 
+         }
+
+         
+
+     }
+    .destination-items{
+        background-color: white;
+        height: 700px;}
+    .destination-text{
+        background-color: white;
+        .destination-content{
+                a{
+                    font-size: 16px;
+                    color: $darkblue;
+                    transition: 0.3 all ease;
+                    display: block;
+                    line-height: 12px;
+
+                }
+                span{
+                    color:$gray;
+                    font-size: 10px;
+                }
+          }
+          .destination-price{
+            span{
+                    color:$gray;
+                    font-size: 10px;
+              }
+              h4{
+                  font-weight: 400;
+                  color: $lightgreen;
+                  font-size: 20px;
+                  }       
+
+         }
+         &:hover{
+             .destination-content{
+                 a{
+                     color:$blue;
+                 }
+             }
+             
+         }
+
+    }
+ }
+ #search-hotels{
+    position: relative;
+    background-image: url("../img/global-map.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    h2{
+        font-size: 31px;
+        font-weight: 700;
+        color: white;
+    }
+    p{
+        font-size: 24px;
+        color: white;
+        
+    }
+    
+    .promo{
+        @media (min-width:0px) and (max-width:568px) {
+            img{
+                height: 200px;
+                margin: 0 auto;
+            }
+        }
+        @media (min-width:567px) and (max-width:992px) {
+            img{
+                height: 200px;
+                margin: 0 auto;
+            }
+        }
+        @media  (min-width:991px) {
+            img{
+                transform: translateX(-20%);
+                 height: 245px;
+                  width: 127%;
+            }
+        }
+        img{
+          //  max-height: 200px;
+           // width: 70%;
+            object-fit: cover;
+        }
+    }
+    input,a{
+        text-indent: 15px;
+        height: 50px;
+        border: 0px;
+        
+        width: 100%;
+    }
+    input{
+        color: $gray;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: $lightgreen;
+        &:hover{
+            background-color: $green;
+        }
+    }
+
+ }
